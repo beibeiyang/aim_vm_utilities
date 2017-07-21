@@ -85,8 +85,7 @@ To remove snapshots of all VMs in tme-aim folder with a given snapshot name (-sn
 
 This script retrieves vCPU, Memory and Disk provision stats of all VMs from a
 VM folder in vCenter. Given a folder name in vSphere, the script will print out
-the provisioned vCPU, memory and Disk of every VM in that folder and spit out
-the sum at the end. Nested folders are supported.
+the provisioned vCPU, memory and Disk of every VM in that folder and sum up the stats at the end. Nested folders are supported.
 
 ```
 $ python aim_get_vmfolder_resources_stats.py -h
