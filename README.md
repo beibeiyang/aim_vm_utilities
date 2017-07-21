@@ -86,7 +86,7 @@ To remove snapshots of all VMs in tme-aim folder with a given snapshot name (-sn
 This script retrieves vCPU, Memory and Disk provision stats of all VMs from a
 VM folder in vCenter. Given a folder name in vSphere, the script will print out
 the provisioned vCPU, memory and Disk of every VM in that folder and spit out
-the sum at the end.
+the sum at the end. Nested folders are supported.
 
 ```
 $ python aim_get_vmfolder_resources_stats.py -h
@@ -116,4 +116,127 @@ and Disk of every VM in the ODC folder and sum up the stats at the end:
 ```
     python aim_get_vmfolder_resources_stats.py -s aim.lab.emc.com
     -u user@vsphere.local -p <password> -f hwx01m20170101123456
+```
+
+Sample output:
+```shell
+$ python aim_get_vmfolder_resources_stats.py -s aim.lab.emc.com user@vsphere.local -p password -f hwx20170612231000
+Identify VMs in folder hwx20170612231000
+==============================
+Name	:  hwx26hwxworker11
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker10
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker8
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker6
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker4
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker9
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker3
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker7
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker2
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker0
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker1
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxworker5
+# vCPU	:  6
+# memory (MB)	:  57344
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+Hard disk 4 (GB)	: 100.000000
+==============================
+Name	:  hwx26hwxmgmt0
+# vCPU	:  4
+# memory (MB)	:  49152
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+==============================
+Name	:  hwx26hwxmaster0
+# vCPU	:  4
+# memory (MB)	:  49152
+Hard disk 1 (GB)	: 10.000000
+Hard disk 2 (GB)	: 54.000000
+Hard disk 3 (GB)	: 44.000000
+******************************
+FINAL STATS
+******************************
+Identified 14 VMs
+Total vCPU:  80.0
+Total Memory (GB):  768.0
+Total Disk (GB):  2712.0
 ```
