@@ -6,6 +6,17 @@ Copyright (c) 2017 Dell, Inc.
 
 For any general or technical questions, email: Beibei.Yang@dell.com
 
+## How to Install 
+
+Steps:
+
+1. Install [Python 3.x](https://www.python.org/downloads/) or [Anaconda Python 3.x](https://www.continuum.io/downloads)
+
+2. Install [virtualenv](https://pypi.python.org/pypi/virtualenv)
+
+3. Run `pip install pyvmomi` to install [pyvmomi](https://github.com/vmware/pyvmomi)
+
+
 ## Script: ```aim_batch_snapshot_vms.py```
 
 This script batch snapshots all VMs in a vCenter folder with the same snapshot
