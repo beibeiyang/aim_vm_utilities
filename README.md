@@ -112,7 +112,7 @@ optional arguments:
 ```
 
 For example, the following command will print out the provisioned vCPU, memory
-and Disk of every VM in the ODC folder and spit out the sum at the end:
+and Disk of every VM in the ODC folder and sum up the stats at the end:
 ```
     python aim_get_vmfolder_resources_stats.py -s aim.lab.emc.com
     -u user@vsphere.local -p <password> -f hwx01m20170101123456
